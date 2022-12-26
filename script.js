@@ -6,10 +6,12 @@ async function getWeatherByLocation(location) {
   const resp = await fetch(url(location), {
     origin: "cors"
   })
-  
+
   const respData = await resp.json()
 
-  console.log(respData)
+  console.log(respData, KelvinToCelsius(respData.main.temp))
 }
 
-getWeatherByLocation("London")
+getWeatherByLocation("Fortaleza")
+
+const KelvinToCelsius = (K) => (K - 273.15).toFixed(2)
