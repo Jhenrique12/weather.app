@@ -4,10 +4,10 @@ const main = document.getElementById('main')
 const form = document.getElementById('form')
 const inputSearch  = document.getElementById('search')
 
-const url = (location) => `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}`
+const url = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
 
-async function getWeatherByLocation(location) {
-  const resp = await fetch(url(location), {
+async function getWeatherByLocation(city) {
+  const resp = await fetch(url(city), {
     origin: "cors"
   })
 
@@ -28,6 +28,8 @@ function addWeather(data) {
     <p> em ${inputSearch.value} </p>
   `
 
+  main.innerHTML = ''
+
   main.appendChild(weather)
 }
 
@@ -36,10 +38,10 @@ const KelvinToCelsius = (K) => (K - 273.15).toFixed(2)
 form.addEventListener('submit', (ev) => {
   ev.preventDefault()
 
-  const location = inputSearch.value 
+  const city = inputSearch.value 
 
-  if(location) {
-    getWeatherByLocation(location)
+  if(city) {
+    getWeatherByLocation(city)
   }
 
 })
