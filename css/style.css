@@ -5,7 +5,45 @@
 }
 
 body {
+  color: white;
+  background: linear-gradient(0deg, #229ac3 35%, #2dfddf 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   margin: 0;
+}
+
+#title {
+  margin-bottom: 30px;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#form {
+  padding-bottom: 100px;
+}
+#form input {
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.6rem;
+}
+#form input:focus {
+  outline: none;
+}
+
+.weather {
+  font-size: 2rem;
+  text-align: center;
+}
+.weather h2 {
+  margin-bottom: 0;
+}
+.weather img {
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */
