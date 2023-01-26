@@ -21,6 +21,7 @@ Através de uma API são pegos as informações sobre o clima e a temperatura do
 - Sass
 - JavaScript
 - Git e Github
+- [Open Weather API](https://openweathermap.org/api)
 
 ##  🌐 Site hospedado 
 
